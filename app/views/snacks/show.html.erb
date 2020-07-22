@@ -1,0 +1,10 @@
+<%= @snack.name %>'s Show Page
+
+Price: <%= @snack.price %>
+
+<% @snack.machines.each do |location| %>
+  <section class="locations-<%= location.id %>">
+    <%= location.location %>
+    <%= location.snacks.snacks_count %> kinds of snacks, average price: <%= location.snacks.average_price %>
+  </section>
+<% end %>
